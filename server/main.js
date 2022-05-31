@@ -1,0 +1,1 @@
+import "./online-application-graphql/index.js";
