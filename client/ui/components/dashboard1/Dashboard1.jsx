@@ -13,7 +13,7 @@ const client = new ApolloClient({
     cache: new InMemoryCache()
 });
 
-export default class Dashboard extends Component {
+export default class Dashboard1 extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -25,7 +25,7 @@ export default class Dashboard extends Component {
 	render() {
 
 		return (
-			<App active="dashboard" state={this.props.state}>
+			<App active="dashboard1" state={this.props.state}>
 				<ApolloProvider client={client}>
           <div className="subheader">
             <h1 className="subheader-title">

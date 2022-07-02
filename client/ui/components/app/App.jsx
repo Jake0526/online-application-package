@@ -39,7 +39,14 @@ export default App = (props) => {
               id: 'dashboard',
               href: '/',
               subMenu: [],
-            }
+            },
+            {
+              name: 'Dashboard1',
+              icon: 'fal fa-chart-area',
+              id: 'dashboard1',
+              href: '/dashboard1',
+              subMenu: [],
+            },
           ]}
           active={props.active}
           subActive={props.subActive}
