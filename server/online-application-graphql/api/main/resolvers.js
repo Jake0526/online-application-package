@@ -10,6 +10,7 @@ import {
   religionByCodeQuery,
   profileQuery,
   profileByReligionQuery,
+  // applicationAttachmentQuery,
 } from '../../data/queries/onlineApplication';
 
 const resolvers = {
@@ -75,7 +76,17 @@ const resolvers = {
       }).then((results) => results).catch(console.error);
 
       return religionByCodeResult;
-    }
+    },
+    // async applicationAttachment(obj, args){
+    //   const applicationAttachmentResult = await sequelizedPIMS.query(applicationAttachmentQuery, {
+    //     type: Sequelize.QueryTypes.SELECT,
+    //     raw: true,
+    //     nest: true,
+    //     logging: false,
+    //   }).then((results) => results).catch(console.error);
+
+    //   return applicationAttachmentResult;
+    // }
   },
 };
 

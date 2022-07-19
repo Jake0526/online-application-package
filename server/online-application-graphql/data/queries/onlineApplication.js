@@ -1,3 +1,47 @@
+const educationByProfileQuery = `
+SELECT
+  id,
+  profile_code AS 'profileCode',
+  name AS 'schoolName',
+  address AS 'schoolAddress',
+  DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%S') AS 'createdAt',
+  DATE_FORMAT(updated_at, '%Y-%m-%d %H:%i:%S') AS 'updatedAt'
+FROM education
+WHERE profile_code = :profileCode
+ORDER BY name ASC;
+`;
+
+const trainingByProfileQuery = `
+SELECT
+  id,
+  profile_code AS 'profileCode',
+  title AS 'trainingTitle',
+  address AS 'trainingAddress',
+  DATE_FORMAT(training_date, '%Y-%m-%d %H:%i:%S') AS 'trainingDate',
+  DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%S') AS 'createdAt',
+  DATE_FORMAT(updated_at, '%Y-%m-%d %H:%i:%S') AS 'updatedAt'
+FROM training
+WHERE profile_code = :profileCode
+ORDER BY name ASC;
+`;
+
+const experienceByProfileQuery = `
+SELECT
+  id,
+  profile_code AS 'profileCode',
+  position_name AS 'positionName',
+  job_description AS 'jobDescription',
+  company_name AS 'companyName',
+  company_address AS 'companyAddress',
+  DATE_FORMAT(start_date, '%Y-%m-%d %H:%i:%S') AS 'startDate',
+  DATE_FORMAT(end_date, '%Y-%m-%d %H:%i:%S') AS 'endDate',
+  DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%S') AS 'createdAt',
+  DATE_FORMAT(updated_at, '%Y-%m-%d %H:%i:%S') AS 'updatedAt'
+FROM experience
+WHERE profile_code = :profileCode
+ORDER BY name ASC;
+`;
+
 const religionQuery = `
 SELECT
   id,
@@ -137,9 +181,24 @@ WHERE religion_code = :religionCode
 ORDER BY last_name ASC;
 `;
 
+const applicationAttachmentQuery = `
+SELECT
+  id,
+  attachment,
+  file_name AS fileName,
+  path,
+  type,
+  DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%S') AS 'createdAt',
+  DATE_FORMAT(updated_at, '%Y-%m-%d %H:%i:%S') AS 'updatedAt'
+`;
+
 export {
+  educationByProfileQuery,
+  trainingByProfileQuery,
+  experienceByProfileQuery,
   religionQuery,
   religionByCodeQuery,
   profileQuery,
   profileByReligionQuery,
+  applicationAttachmentQuery,
 };

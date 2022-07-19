@@ -1,7 +1,8 @@
 import { gql } from 'apollo-server-express';
 
 const typeDefs = gql`
-  extend type Query {
+  extend 
+  type Query {
     profiles: [Profile]
     religion: [Religion]
     firstReligion: Religion
@@ -34,6 +35,7 @@ const typeDefs = gql`
     lotNo: String
     building: String
   }
+
 `;
 
 export default typeDefs;

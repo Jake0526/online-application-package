@@ -27,16 +27,16 @@ export default class Dashboard extends Component {
 		return (
 			<App active="dashboard" state={this.props.state}>
 				<ApolloProvider client={client}>
-          <div className="subheader">
-            <h1 className="subheader-title">
-              <i className='subheader-icon fal fa-chart-area'></i> Dashboard
-            </h1>
-          </div>
-          <Panel title="Dashboard" hideAction={true}>
-            <Panel.Content>
-              <DashboardContent />
-            </Panel.Content>
-          </Panel>
+				<div className="subheader">
+					<h1 className="subheader-title">
+						<i className='subheader-icon fal fa-chart-area'></i> Dashboard
+					</h1>
+				</div>
+				<Panel title="Dashboard" hideAction={true}>
+					<Panel.Content>
+						{/* <DashboardContent /> */}
+					</Panel.Content>
+				</Panel>
 				</ApolloProvider>
 			</App>
 		);
