@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default JobDetail = () => {
+export default List = () => {
     return(
-        <div style={{height: "72%", overflowY: "auto"}}>
+        <div style={{height: "400px", overflowY: "auto"}}>
             <div className="card mb-g">
                 <span className="fw-500 p-3">
                     <i>Search Results..</i>

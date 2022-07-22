@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 
 export default JobDetail = () => {
     return(
-        <div style={{height: "72%", overflowY: "auto"}}>
+        <div style={{height: "400px", overflowY: "auto"}}>
             <div className="card card-body">
                 <div className="mb-3">
                     <Link className="btn btn-warning" to="/job-application">Apply</Link>
                 </div>
+                <Link className="" to="/job-application">
+                    <i className="fas fa-heart color-danger-800"></i> <strong>Save Job</strong>
+                </Link>
                 <h2 className="text-primary mt-5">Web Developer React, React JS</h2>
                 <div className="ml-2">
                     <small className="text-warning">Posted on July 15, 2022</small>

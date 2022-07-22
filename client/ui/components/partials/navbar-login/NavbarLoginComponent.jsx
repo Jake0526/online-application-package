@@ -6,7 +6,7 @@ export const NavbarLoginComponent = () => {
     
     return(
         <div>
-            <div className="row justify-content-center mt-5">
+            <div className="row justify-content-center mt-3">
                 <div className="col-sm-12 col-md-12">
                     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                         <a className="navbar-brand d-flex align-items-center fw-500" href="#">

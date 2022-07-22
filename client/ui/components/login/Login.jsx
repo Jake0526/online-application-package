@@ -40,7 +40,7 @@ export default class Login extends Component {
                             </form>
                         </div>
                         <div className="blankpage-footer text-center">
-                            <a href="#"><strong>Recover Password</strong></a> | <a href="#"><strong>Register Account</strong></a>
+                            <Link to="/recover-password"><strong>Recover Password</strong></Link> | <Link to="/new/register"><strong>Register Account</strong></Link>
                         </div>
                     </div>
                     <div className="login-footer p-2">
